@@ -7,7 +7,7 @@ from cursom.apps.productos.forms import AgregarForm
 from django.http import HttpResponseRedirect
 
 def index(request):
-	producto = Producto.objects.filter(disponible=True);
+	producto = Producto.objects.filter(disponible=True).order_by('-id');
 	ctx = {'producto':producto}
 	return render_to_response('home/index.html', ctx ,context_instance = RequestContext(request))
 
