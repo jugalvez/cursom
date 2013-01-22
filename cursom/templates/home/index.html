@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+	Mi Aplicación
+{% endblock title %}
+{% block description %}
+	Descripción de hasta 160 caracteres
+{% endblock description %}
+{% block content %}
+	{% for p in producto %}
+		{{ p.nombre }} - {{ p.categoria }}<br>
+		{{ p.descripcion }}<br><br>
+	{% endfor %}
+{% endblock content %}
