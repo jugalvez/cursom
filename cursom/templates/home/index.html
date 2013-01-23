@@ -6,6 +6,7 @@
 	Descripción de hasta 160 caracteres
 {% endblock description %}
 {% block content %}
+	{{ user.username|default:"Aún no estas registrado" }}<br><br>
 	{% for p in producto %}
 		{{ p.nombre }} - {{ p.categoria }}<br>
 		{{ p.descripcion }}<br><br>
