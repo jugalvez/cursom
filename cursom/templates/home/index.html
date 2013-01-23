@@ -9,5 +9,7 @@
 	{% for p in producto %}
 		{{ p.nombre }} - {{ p.categoria }}<br>
 		{{ p.descripcion }}<br><br>
+	{% empty %}
+		Aún no hay productos
 	{% endfor %}
 {% endblock content %}
